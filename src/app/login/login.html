@@ -1,0 +1,53 @@
+<div class="container">
+  <form (ngSubmit)="submitLoginForm()" [formGroup]="loginForm">
+    <h3>Login</h3>
+    <label for="email">Correo</label><br />
+    <input
+      type="text"
+      id="email"
+      name="email"
+      value=""
+      formControlName="email"
+    />
+
+    @if(loginForm.get('email')?.errors && loginForm.get('email')?.dirty) { 
+        @if (loginForm.get('email')?.hasError('required')) {
+            <div class="error">Requerido</div>
+        } 
+
+        @if (loginForm.get('email')?.hasError('email')) {
+            <div class="error">Correo incorrecto</div>
+        }         
+    }
+    <br />
+
+    <label for="clave">Clave</label><br />
+    <input
+      type="password"
+      id="clave"
+      name="clave"
+      value=""
+      formControlName="clave"
+    />
+
+    @if(loginForm.get('clave')?.errors && loginForm.get('clave')?.dirty){ 
+        @if (loginForm.get('clave')?.hasError('required')) {
+            <div class="error">Requerido</div>
+            } 
+
+        @if (loginForm.get('clave')?.hasError('minlength')) {
+            <div class="error">Mínimo 6 caracteres</div>
+            } 
+
+        @if (loginForm.get('clave')?.hasError('maxlength')) {
+            <div class="error">Máximo 10 caracteres</div>
+            } 
+    }        
+
+    <br />
+    <br />
+
+    <input type="submit" value="Aceptar" [disabled]="!loginForm.valid" />
+
+  </form>
+</div>

@@ -1,0 +1,52 @@
+label {
+    padding: 1em;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.texto {
+    font-size: 20px;
+    font-weight: bold;
+    max-width: 500px;
+    text-align: justify;
+}
+
+.incrementar {
+    background-color: #04AA6D;
+}
+
+.incrementar:hover {
+    background-color: #20aa77
+}
+
+.decrementar {
+    background-color: #f44336;
+}
+
+.decrementar:hover {
+    background-color: #f75e53
+}
+
+.boton {
+    border: 1px solid gray;
+    color: white;
+    padding: 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container>div {
+    margin: 10px;
+    padding: 20px;
+}
