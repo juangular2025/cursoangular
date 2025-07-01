@@ -1,0 +1,41 @@
+@if(loading){
+    <div class="contenedor">
+        <div class="mensaje"></div>
+    </div>
+}
+@else {
+    <table id="productos">
+        <thead>
+            <th>
+                Id
+            </th>
+            <th>
+                Título
+            </th>
+            <th>
+                Descripción
+            </th>
+            <th>
+                Precio
+            </th>
+        </thead>
+        <tbody>
+            @for (producto of productos; track producto.id) {
+            <tr>
+                <td>
+                    {{producto.id}}
+                </td>
+                <td>
+                    {{producto.title}}
+                </td>
+                <td>
+                    {{producto.description}}
+                </td>
+                <td>
+                    {{producto.price | currency}}
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
