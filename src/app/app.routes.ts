@@ -5,6 +5,7 @@ import { Registro } from './registro/registro';
 import { Login } from './login/login';
 import { Detalle } from './detalle/detalle';
 import { Contador } from './contador/contador';
+import { Contact } from './contact/contact';
 
 export const routes: Routes = [
     {
@@ -30,6 +31,10 @@ export const routes: Routes = [
     {
         path: 'contador',
         component: Contador
+    },
+    {
+        path: 'contact',
+        component: Contact
     },
     {
         path: '**',
